@@ -11,7 +11,9 @@ Project.hasMany(ScreenSize);
 ScreenSize.belongsTo(Project);
 
 ScreenSize.hasMany(FontScale);
-FontScale.hasMany(ScreenSize);
+FontScale.belongsTo(ScreenSize);
+
+console.log('Models Created');
 
 module.exports = {
   db,
